@@ -1,0 +1,14 @@
+# Go build artifacts
+/bin/
+/pkg/
+/*.exe
+/*.test
+*.out
+
+# Test result logs
+logs/
+*.log
+
+# Today's symlink directory
+latest
+
