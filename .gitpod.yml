@@ -1,0 +1,14 @@
+tasks:
+  - name: Setup Go and LazyVim
+    init: |
+      # Install Neovim
+      curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.tar.gz
+      tar -xvzf nvim-linux64.tar.gz
+      sudo mv nvim-linux64 /opt/nvim
+      sudo ln -s /opt/nvim/bin/nvim /usr/local/bin/nvim
+
+      # Setup LazyVim config
+      rm -rf ~/.config/nvim
+      git clone https://github.com/michaelorina/lazyvim-config ~/.config/nvim
+    command: go run .
+
