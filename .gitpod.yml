@@ -9,7 +9,7 @@ tasks:
       sudo ln -sf /opt/nvim/bin/nvim /usr/local/bin/nvim
 
       # Clone LazyVim config
-      git clone git@github.com:michaelorina/lazyvim-config.git ~/.config/nvim
+      git clone https://github.com/michaelorina/lazyvim-config.git ~/.config/nvim
       rm -rf ~/.config/nvim/.git
 
     command: nvim
