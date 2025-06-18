@@ -15,7 +15,7 @@ log() {
 # Create today's folder
 if [ ! -d "$TODAY" ]; then
   echo "📂 Creating today's folder: $TODAY"
-  mkdir -p "$TODAY/arrays"
+  mkdir -p "$TODAY/array"
   log "✅ Created today's directory structure: $TODAY"
 fi
 
