@@ -21,11 +21,11 @@ fi
 
 # Declare files
 declare -a function_files=(
-  "$TODAY/arrays/arrays.go"
+  "$TODAY/array/array.go"
 )
 
 declare -a test_files=(
-  "tests/arrays_test.go"
+  "tests/array_test.go"
 )
 
 # Create function files
