@@ -16,16 +16,19 @@ log() {
 if [ ! -d "$TODAY" ]; then
   echo "📂 Creating today's folder: $TODAY"
   mkdir -p "$TODAY/array"
+  mkdir -p "$TODAY/slice"
   log "✅ Created today's directory structure: $TODAY"
 fi
 
 # Declare files
 declare -a function_files=(
   "$TODAY/array/array.go"
+  "$TODAY/slice/slice.go"
 )
 
 declare -a test_files=(
   "tests/array_test.go"
+  "tests/slice_test.go"
 )
 
 # Create function files
