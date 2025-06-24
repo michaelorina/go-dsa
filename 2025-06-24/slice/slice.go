@@ -15,7 +15,7 @@ func AppendToSlice(s []int, val int) []int {
   return append(s, val)
 }
 
-func DeleteFromSlice(s []int, val int) []int {
+func DeleteFromSlice(s []int, index int) []int {
   if index < 0 || index >= len(s) {
     return s
   }
@@ -23,9 +23,9 @@ func DeleteFromSlice(s []int, val int) []int {
 }
 
 func CopySlice(src []int) []int {
-  dst := make([]int, len(src))
+  dest := make([]int, len(src))
   copy(dest, src)
-  return dst
+  return dest
 }
 
 func LenSlice(s []int) int {

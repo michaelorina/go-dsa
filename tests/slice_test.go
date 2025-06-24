@@ -24,11 +24,10 @@ func TestGetSlice(t *testing.T) {
     t.Errorf("Expected 30, got %v (ok: %v)", val, ok)
   }
 
-  _, ok = slice.GetSlice(s, 5) {
+  _, ok = slice.GetSlice(s, 5)
     if ok {
       t.Errorf("Expected false for out-of-bounds access")
     }
-  }
 }
 
 func TestAppendToSlice(t *testing.T) {

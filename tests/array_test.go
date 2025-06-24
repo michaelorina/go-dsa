@@ -1,7 +1,6 @@
 package tests
 
 import (
-  "reflect"
   "testing"
   
   "github.com/michaelorina/go-dsa/latest/array"  
@@ -24,7 +23,7 @@ func TestGetArray(t *testing.T) {
 		t.Errorf("Expected 20, got %v (ok: %v)", val, ok)
 	}
 
-	_, ok = arrays.GetArray(arr, 5)
+	_, ok = array.GetArray(arr, 5)
 	if ok {
 		t.Error("Expected false for out-of-bounds access")
 	}
