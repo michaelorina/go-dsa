@@ -4,7 +4,7 @@ import (
   "reflect"
   "testing"
   
-  "latest/array"  
+  "github.com/michaelorina/go-dsa/latest/array"  
 )
 
 func TestDefineArray(t *testing.T) {
@@ -18,7 +18,7 @@ func TestDefineArray(t *testing.T) {
 
 func TestGetArray(t *testing.T) {
 	arr := [3]int{10, 20, 30}
-	val, ok := arrays.GetArray(arr, 1)
+	val, ok := array.GetArray(arr, 1)
 
 	if !ok || val != 20 {
 		t.Errorf("Expected 20, got %v (ok: %v)", val, ok)
@@ -33,7 +33,7 @@ func TestGetArray(t *testing.T) {
 func TestCopyArray(t *testing.T) {
 	src := [3]int{4, 5, 6}
 	expected := src
-	result := arrays.CopyArray(src)
+	result := array.CopyArray(src)
 
 	if result != expected {
 		t.Errorf("Expected %v, got %v", expected, result)
@@ -43,7 +43,7 @@ func TestCopyArray(t *testing.T) {
 func TestModifyArray(t *testing.T) {
 	arr := [3]int{7, 8, 9}
 	expected := [3]int{7, 100, 9}
-	result := arrays.ModifyArray(arr, 1, 100)
+	result := array.ModifyArray(arr, 1, 100)
 
 	if result != expected {
 		t.Errorf("Expected %v, got %v", expected, result)
@@ -52,7 +52,7 @@ func TestModifyArray(t *testing.T) {
 
 func TestLenArray(t *testing.T) {
 	arr := [3]int{1, 2, 3}
-	if l := arrays.LenArray(arr); l != 3 {
+	if l := array.LenArray(arr); l != 3 {
 		t.Errorf("Expected length 3, got %d", l)
 	}
 }
