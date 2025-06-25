@@ -34,3 +34,4 @@ func LenSlice(s []int) int {
 
 func CapSlice(s []int) int {
   return cap(s)
+}
