@@ -23,4 +23,5 @@ func BinarySearch(array []int, target int) (int, bool) {
       high = mid
     }
   }
+  return -1, false
 }
