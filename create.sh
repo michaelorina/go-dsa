@@ -28,6 +28,19 @@ if [ -f "$YESTERDAY/array/array.go" ]; then
   log "✅ Copied $YESTERDAY/array/array.go to $TODAY/array/array.go"
 fi
 
+# Copy yesterday's slice.go if it exists
+if [ -f "$YESTERDAY/slice/slice.go" ]; then
+  cp "$YESTERDAY/slice/slice.go" "$TODAY/slice/slice.go"
+  echo "📄 Copied yesterday's slice.go to today's folder"
+  log "✅ Copied $YESTERDAY/slice/slice.go to $TODAY/slice/slice.go"
+fi
+
+# Copy yesterday's slice.go if it exists
+if [ -f "$YESTERDAY/search/ssearch.go" ]; then
+  cp "$YESTERDAY/search/search.go" "$TODAY/search/search.go"
+  echo "📄 Copied yesterday's search.go to today's folder"
+  log "✅ Copied $YESTERDAY/search/search.go to $TODAY/search/search.go"
+
 # Declare files
 declare -a function_files=(
   "$TODAY/array/array.go"
