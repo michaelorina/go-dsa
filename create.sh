@@ -19,6 +19,7 @@ if [ ! -d "$TODAY" ]; then
   mkdir -p "$TODAY/array"
   mkdir -p "$TODAY/slice"
   mkdir -p "$TODAY/search"
+  mkdir -p "$TODAY/sort"
   log "✅ Created today's directory structure: $TODAY"
 fi
 # Copy yesterday's array.go if it exists
@@ -40,6 +41,7 @@ if [ -f "$YESTERDAY/search/search.go" ]; then
   cp "$YESTERDAY/search/search.go" "$TODAY/search/search.go"
   echo "📄 Copied yesterday's search.go to today's folder"
   log "✅ Copied $YESTERDAY/search/search.go to $TODAY/search/search.go"
+fi
 
 # Declare files
 declare -a function_files=(
@@ -63,7 +65,7 @@ for file in "${function_files[@]}"; do
     touch "$file"
     log "✅ Created function file: $file"
   else
-   log "ℹ️ File already exists: $file (skipped creation)"
+    log "ℹ️ File already exists: $file (skipped creation)"
   fi
 done
 
