@@ -36,7 +36,7 @@ if [ -f "$YESTERDAY/slice/slice.go" ]; then
 fi
 
 # Copy yesterday's slice.go if it exists
-if [ -f "$YESTERDAY/search/ssearch.go" ]; then
+if [ -f "$YESTERDAY/search/search.go" ]; then
   cp "$YESTERDAY/search/search.go" "$TODAY/search/search.go"
   echo "📄 Copied yesterday's search.go to today's folder"
   log "✅ Copied $YESTERDAY/search/search.go to $TODAY/search/search.go"
@@ -46,12 +46,14 @@ declare -a function_files=(
   "$TODAY/array/array.go"
   "$TODAY/slice/slice.go"
   "$TODAY/search/search.go"
+  "$TODAY/sort/sort.go"
 )
 
 declare -a test_files=(
   "tests/array_test.go"
   "tests/slice_test.go"
   "tests/search_test.go"
+  "tests/sort_test.go"
 )
 
 # Create function files
