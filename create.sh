@@ -49,6 +49,7 @@ declare -a function_files=(
   "$TODAY/slice/slice.go"
   "$TODAY/search/search.go"
   "$TODAY/sort/sort.go"
+  "$TODAY/sort/linkedlist.go"
 )
 
 declare -a test_files=(
@@ -56,6 +57,7 @@ declare -a test_files=(
   "tests/slice_test.go"
   "tests/search_test.go"
   "tests/sort_test.go"
+  "tests/linkedlist_test.go"
 )
 
 # Create function files
