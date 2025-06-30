@@ -32,3 +32,4 @@ func TestLinkedList(t *testing.T) {
 	if list.Length() != 2 {
 		t.Errorf("Expected length 2 after deletion, got %d", list.Length())
 	}
+}
