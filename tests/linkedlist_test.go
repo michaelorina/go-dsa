@@ -7,7 +7,7 @@ import (
 )
 
 func TestLinkedList(t *testing.T) {
-	list := &linkedlist.LinkedList{}
+	list := &sort.LinkedList{}
 
 	list.Insert(10)
 	list.Insert(20)
