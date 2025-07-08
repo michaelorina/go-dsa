@@ -18,6 +18,7 @@ declare -A paths_to_copy=(
   ["$YESTERDAY/search/search.go"]="$TODAY/search/search.go"
   ["$YESTERDAY/sort/sort.go"]="$TODAY/sort/sort.go"
   ["$YESTERDAY/sort/linkedlist.go"]="$TODAY/sort/linkedlist.go"
+  ["$YESTERDAY/sort/queue.go"]="$TODAY/sort/queue.go"
 )
 
 for src in "${!paths_to_copy[@]}"; do

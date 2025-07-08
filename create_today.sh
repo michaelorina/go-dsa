@@ -29,6 +29,7 @@ declare -a function_files=(
   "$TODAY/sort/sort.go"
   "$TODAY/sort/linkedlist.go"
   "$TODAY/sort/queue.go"
+  "$TODAY/sort/stack.go"
 )
 
 # Define test files to create
@@ -39,6 +40,7 @@ declare -a test_files=(
   "tests/sort_test.go"
   "tests/linkedlist_test.go"
   "tests/queue_test.go"
+  "tests/stack_test.go"
 )
 
 # Create function files if missing
