@@ -18,8 +18,7 @@ if [ ! -d "$TODAY" ]; then
   mkdir -p "$TODAY/slice"
   mkdir -p "$TODAY/search"
   mkdir -p "$TODAY/sort"
-  mkdir -p "$TODAY/quicksort"
-  log "✅ Created directory structure for $TODAY"
+  mkdir -p "$TODAY/quicksort" log "✅ Created directory structure for $TODAY"
 fi
 
 # Define function files to create
