@@ -18,7 +18,9 @@ if [ ! -d "$TODAY" ]; then
   mkdir -p "$TODAY/slice"
   mkdir -p "$TODAY/search"
   mkdir -p "$TODAY/sort"
-  mkdir -p "$TODAY/quicksort" log "✅ Created directory structure for $TODAY"
+  mkdir -p "$TODAY/quicksort"
+  mkdir -p "$TODAY/doublylinkedlist"
+  log "✅ Created directory structure for $TODAY"
 fi
 
 # Define function files to create
@@ -31,6 +33,7 @@ declare -a function_files=(
   "$TODAY/sort/queue.go"
   "$TODAY/sort/stack.go"
   "$TODAY/quicksort/quicksort.go"
+  "$TODAY/doublylinkedlist/doublylinkedlist.go"
 )
 
 # Define test files to create
@@ -43,6 +46,7 @@ declare -a test_files=(
   "tests/queue_test.go"
   "tests/stack_test.go"
   "tests/quicksort_test.go"
+  "tests/doublylinkedlist_test.go"
 )
 
 # Create function files if missing
