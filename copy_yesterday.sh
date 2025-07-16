@@ -21,6 +21,7 @@ declare -A paths_to_copy=(
   ["$YESTERDAY/sort/queue.go"]="$TODAY/sort/queue.go"
   ["$YESTERDAY/sort/stack.go"]="$TODAY/sort/stack.go"
   ["$YESTERDAY/quicksort/quicksort.go"]="$TODAY/quicksort/quicksort.go"
+  ["$YESTERDAY/doublylinkedlist/doublylinkedlist.go"]="$TODAY/doublylinkedlist/doublylinkedlist.go"
 )
 
 for src in "${!paths_to_copy[@]}"; do
