@@ -23,8 +23,12 @@ if [ ! -d "$TODAY" ]; then
   mkdir -p "$TODAY/tree"
   mkdir -p "$TODAY/treesearch"
   mkdir -p "$TODAY/heap"
+  mkdir -p "$TODAY/graph"
+
   log "✅ Created directory structure for $TODAY"
 fi
+
+mkdir -p "$TODAY/kvmap"
 
 # Define function files to create
 declare -a function_files=(
@@ -42,6 +46,11 @@ declare -a function_files=(
   "$TODAY/treesearch/bst.go"
   "$TODAY/heap/heap.go"
   "$TODAY/heap/trie.go"
+  "$TODAY/graph/graph.go"
+  "$TODAY/graph/dijkstra.go"
+  "$TODAY/graph/priority_queue.go"
+  "$TODAY/kvmap/kvmap.go"
+  "$TODAY/kvmap/lru.go"
 )
 
 # Define test files to create
@@ -60,6 +69,10 @@ declare -a test_files=(
   "tests/bst_test.go"
   "tests/heap_test.go"
   "tests/trie_test.go"
+  "tests/graph_test.go"
+  "tests/dijkstra_test.go"
+  "tests/kvmap_test.go"
+  "tests/lru_test.go"
 )
 
 # Create function files if missing
