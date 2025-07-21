@@ -23,6 +23,7 @@ declare -A paths_to_copy=(
   ["$YESTERDAY/quicksort/quicksort.go"]="$TODAY/quicksort/quicksort.go"
   ["$YESTERDAY/doublylinkedlist/doublylinkedlist.go"]="$TODAY/doublylinkedlist/doublylinkedlist.go"
   ["$YESTERDAY/tree/binarytree.go"]="$TODAY/tree/binarytree.go"
+  ["$YESTERDAY/treesearch/bfs.go"]="$TODAY/treesearch/bfs.go"
 )
 
 for src in "${!paths_to_copy[@]}"; do

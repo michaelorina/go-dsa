@@ -22,6 +22,7 @@ if [ ! -d "$TODAY" ]; then
   mkdir -p "$TODAY/doublylinkedlist"
   mkdir -p "$TODAY/tree"
   mkdir -p "$TODAY/treesearch"
+  mkdir -p "$TODAY/heap"
   log "✅ Created directory structure for $TODAY"
 fi
 
@@ -38,6 +39,9 @@ declare -a function_files=(
   "$TODAY/doublylinkedlist/doublylinkedlist.go"
   "$TODAY/tree/binarytree.go"
   "$TODAY/treesearch/bfs.go"
+  "$TODAY/treesearch/bst.go"
+  "$TODAY/heap/heap.go"
+  "$TODAY/heap/trie.go"
 )
 
 # Define test files to create
@@ -53,6 +57,9 @@ declare -a test_files=(
   "tests/doublylinkedlist_test.go"
   "tests/binarytree_test.go"
   "tests/bfs_test.go"
+  "tests/bst_test.go"
+  "tests/heap_test.go"
+  "tests/trie_test.go"
 )
 
 # Create function files if missing
